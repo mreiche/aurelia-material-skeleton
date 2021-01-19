@@ -1,5 +1,10 @@
 # Readme
 
+This repository contains a Aurelia Material application with a drawer and one sub navigation item.
+
+![](./screenshot.jpg)
+
+
 ## Development mode
 ```bash
 npm start
