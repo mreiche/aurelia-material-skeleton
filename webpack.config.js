@@ -2,7 +2,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const DuplicatePackageCheckerPlugin = require('duplicate-package-checker-webpack-plugin');
+//const DuplicatePackageCheckerPlugin = require('duplicate-package-checker-webpack-plugin');
 const {AureliaPlugin} = require('aurelia-webpack-plugin');
 const {BundleAnalyzerPlugin} = require('webpack-bundle-analyzer');
 const {CleanWebpackPlugin} = require('clean-webpack-plugin');
@@ -139,7 +139,7 @@ module.exports = ({production} = {}, {analyze, tests, hmr, port, host} = {}) => 
             ]
         },
         plugins: [
-            ...when(!tests, new DuplicatePackageCheckerPlugin()),
+            //...when(!tests, new DuplicatePackageCheckerPlugin()),
             new AureliaPlugin(),
             ...when(production,  new webpack.NormalModuleReplacementPlugin(/config-dev/gi, (resource) => {
                 resource.request = resource.request.replace(/config-dev/, 'config-prod');

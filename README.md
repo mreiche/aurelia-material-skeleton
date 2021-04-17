@@ -4,22 +4,33 @@ This repository contains a Aurelia Material application with a drawer and one su
 
 ![](./screenshot.jpg)
 
+## Build
 
-## Development mode
+### Development mode
 ```bash
 npm start
 ```
 
-## Build release
+### Build release
 Generates the application into `dist`
 ```bash
 npm run build
 ```
 
-## Analyze package sizes
+## Utils
+
+### Analyze package sizes
 Generates visualization of package sizes
 ```bash
 npm run analyze
+```
+
+### Update aurelia-mdc
+
+```shell
+npm install -g npm-check-updates
+ncu -u "/aurelia-mdc-web/"
+npm install
 ```
 
 ## References
